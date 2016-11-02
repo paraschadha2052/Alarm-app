@@ -6,16 +6,25 @@
     android:layout_height="match_parent"
     tools:context="com.example.paras.alarm.MainActivity">
 
+    <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"/>
+
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textWebEmailAddress"
-        android:text="http://apratim.herokuapp.com/new.json"
+        android:text="http://139.59.1.115:8000/new.json"
         android:ems="10"
         android:layout_marginTop="24dp"
         android:id="@+id/editText"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:selectAllOnFocus="true" />
 
     <Button
         android:text="Load File"
@@ -26,6 +35,7 @@
         android:id="@+id/button" />
 
     <EditText
+        android:text="180"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
@@ -74,4 +84,5 @@
         android:layout_below="@+id/editText2"
         android:layout_alignRight="@+id/textView3"
         android:layout_alignEnd="@+id/textView3" />
+
 </RelativeLayout>

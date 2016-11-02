@@ -44,10 +44,10 @@ public class FileReadWrite {
             }
 
             isr.close ( ) ;
+            return datax.toString() ;
         } catch (IOException ioe ) {
-            return "";
             //ioe.printStackTrace ( ) ;
         }
-        return datax.toString() ;
+        return "";
     }
 }
